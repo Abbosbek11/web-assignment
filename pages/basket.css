@@ -148,7 +148,7 @@
     color: #000;
 }
 
-/* Tablet Responsive */
+
 @media (max-width: 768px) {
     .basket .container {
         padding: 0 15px;
@@ -197,7 +197,7 @@
     }
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 480px) {
     .basket {
         padding: 20px 0 30px 0;

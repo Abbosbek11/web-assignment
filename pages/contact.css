@@ -27,7 +27,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Left Side - Contact Info */
 .contact-left {
     flex: 1;
     display: flex;
@@ -77,7 +76,6 @@
     font-weight: 500;
 }
 
-/* Right Side - Contact Form */
 .contact-right {
     flex: 1;
     display: flex;
@@ -152,7 +150,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Tablet Responsive */
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -182,7 +180,7 @@
     }
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 480px) {
     .big {
         min-height: auto;
