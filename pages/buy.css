@@ -157,6 +157,14 @@ form input:focus {
     box-shadow: 0 0 5px rgba(74, 155, 142, 0.2);
 }
 
+.way input:checked + .home, .way input:checked + .truck {
+   border-color: #333;
+    background-color: #f0f5f4;
+}
+.way input {
+    display: none;  
+}
+
 
 @media (max-width: 768px) {
     .container {
