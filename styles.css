@@ -499,7 +499,7 @@ a {
     margin: 0 auto;
 }
 
-.products-list > a {
+.products-list>a {
     display: contents;
 }
 
@@ -518,7 +518,7 @@ a {
     flex-direction: column;
 }
 
-.product-item-3{
+.product-item-3 {
     background-size: 45%;
     background-position: center;
     background-position-y: 70%;
@@ -559,35 +559,39 @@ a {
 
 
 .section-4 {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: var(--white);
 }
 
 .music-promo {
     display: flex;
     align-items: center;
-    gap: 40px;
-    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
     background: linear-gradient(135deg, #5a9b8e 0%, #4a8b7e 100%);
     border-radius: 12px;
-    padding: 40px;
+    padding: 24px;
     color: var(--white);
 }
 
 .music-left {
-    flex: 1;
+    flex: 1 1 320px;
+    min-width: 0;
 }
 
 .music-left img {
-    width: 480px;
+    width: 100%;
+    max-width: 440px;
     position: relative;
-    top: 45px;
+    top: 0;
     border-radius: 12px;
 
 }
 
 .music-right {
-    flex: 1;
+    flex: 1 1 320px;
+    min-width: 0;
 }
 
 .music-right h2 {
@@ -611,7 +615,8 @@ a {
     display: flex;
     align-items: start;
     gap: 20px;
-    width: 530px;
+    width: 100%;
+    max-width: 520px;
     height: 300px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-position: right;
@@ -670,6 +675,7 @@ a {
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: center;
 }
 
 .offer-product img {
@@ -886,20 +892,64 @@ a {
         gap: 40px;
         margin-top: 30px;
         margin-left: 50px;
-        width: 300px;
+        width: 400px;
+    }
+    .hero-text p {
+        width: 60%;
     }
 
     .hero-text h1 {
         font-size: 36px;
     }
 
+    .offer-product img {
+        width: 220px;
+    }
+
+
 }
+
+@media (max-width:862px) {
+    .hero-content{
+        margin-left: 20px;
+        width: 100%;
+
+    }
+    .hero-text p{
+        width: 60%;
+        text-shadow: 0 2px 4px rgb(0, 0, 0);
+    }
+    .music-promo {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .music-left {
+        display: none;
+    }
+
+    .offer-details {
+
+        padding: 20px;
+
+    }
+    .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+}
+
+
 
 @media (max-width: 768px) {
     .search-bar-top {
         flex-wrap: wrap;
         gap: 10px;
     }
+    
 
     .wrapper {
         flex: 0 1 auto;
@@ -947,10 +997,20 @@ a {
         font-size: 32px;
     }
 
+    .hero-text p {
+        font-size: 15px;
+        width: 80%;
+    }
 
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+
+  .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px;
+    }   
+    .pricing-card ul li{
+        text-align: center;
+
     }
 
     .product-card {
@@ -968,6 +1028,14 @@ a {
 
     .product-item {
         height: 300px;
+        background-size: 50%;
+        background-position: center;
+    }
+
+    .product-item-3 {
+
+        background-size: 30%;
+
     }
 
 
@@ -979,9 +1047,7 @@ a {
     }
 
 
-    .music-left img {
-        display: none;
-    }
+
 
     .music-right h2 {
         font-size: 26px;
@@ -1002,7 +1068,10 @@ a {
     }
 
     .offer-product img {
-        display: none;
+        width: 200px;
+        position: relative;
+        right: 0;
+
     }
 
     .offer-left {
@@ -1028,9 +1097,7 @@ a {
         flex-direction: column;
     }
 
-    .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 }
 
 @media (max-width: 480px) {
@@ -1071,8 +1138,15 @@ a {
         max-width: 90%;
         background-position: 75% 50%;
         border-radius: 20px;
+        background: url(images/hero.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 30%;
     }
 
+    .newsletter-right h2 {
+        font-size: 25px;
+    }
 
     .hero-text h1 {
         font-size: 24px;
@@ -1081,6 +1155,7 @@ a {
     .hero-text p {
         font-size: 13px;
         width: 60%;
+
     }
 
     .badge {
@@ -1121,6 +1196,15 @@ a {
 
     .product-item {
         height: 280px;
+        background-size: 45%;
+        background-position: center;
+        background-position-y: 70%;
+        background-repeat: no-repeat;
+    }
+
+    .product-item-3 {
+        background-size: 30%;
+        ;
     }
 
     .product-info {
@@ -1175,18 +1259,14 @@ a {
         padding: 20px 15px;
     }
 
-    .offer-product img {
-        display: none;
-    }
+
 
     .offer-left h2 {
         font-size: 22px;
         margin-top: 10px;
     }
 
-    .offer-product img {
-        display: none;
-    }
+
 
     .offer-details h3 {
         font-size: 14px;
